@@ -7,22 +7,46 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-
+/* animation de fondu au chargement de la page */
 @keyframes fade-in {
-    0%{
-        transform: translateY(10rem);
+    from{
         opacity: 0;
     }
-    100%{
-        transform: translateY(0rem);
+    to{
         opacity: 1;
     } 
 }
 
-.banner img{
-    animation: fade-in 1500ms both ease-in-out;
+/* apparition des titres au scroll */
+@keyframes scale-in{
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
 }
 
-#characters, #place, #studio, #colophon, h2, h2::before, h2::after, .story__article::before, .story__article::after{
-    animation: fade-in 1500ms ease-in-out;
+/* effet de rotation sur les fleurs */
+
+@keyframes rotation-flowers {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+section, footer {
+    animation: fade-in 1500ms forwards;
+}
+
+article.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
+    animation: rotation-flowers 15s linear infinite;
+}
+
+.banner img, .main-character h3, #place h3, #studio h2{
+    animation: scale-in 2000ms forwards;
 }
