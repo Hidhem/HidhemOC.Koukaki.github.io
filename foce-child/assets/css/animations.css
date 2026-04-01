@@ -18,7 +18,7 @@
 }
 
 /* apparition des titres au scroll */
-@keyframes scale-in{
+@keyframes wipe-enter{
     0%{
         transform: translateY(10rem);
     }
@@ -38,6 +38,12 @@
     }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .wipe-enter-animation {
+    animation: wipe-enter 2000ms;
+  }
+}
+
 
 section, footer {
     animation: fade-in 1500ms forwards;
@@ -45,8 +51,4 @@ section, footer {
 
 article.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
     animation: rotation-flowers 15s linear infinite;
-}
-
-.banner img, .main-character h3, #place h3, #studio h2{
-    animation: scale-in 2000ms forwards;
 }

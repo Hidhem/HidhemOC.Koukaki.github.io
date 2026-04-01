@@ -15,3 +15,10 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
+
+// ajout de mon fichier animations JS
+
+function animations_enqueue_script() {
+    wp_enqueue_script('animations_script', get_stylesheet_directory_uri() . '/assets/js/animations.js', array(), '1.1', true);
+}
+add_action('wp_enqueue_scripts', 'animations_enqueue_script');
