@@ -10,6 +10,6 @@ const observer = new IntersectionObserver(entries => {
 });
 
 
-const elements = document.querySelectorAll('.banner img, .story h3, .main-character h3, #place h3, #studio h2, #story h2');
+const elements = document.querySelectorAll('.banner img, #characters, #place, #studio, #oscars, footer');
 
 elements.forEach((element) => observer.observe(element));

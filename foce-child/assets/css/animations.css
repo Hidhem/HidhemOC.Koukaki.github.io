@@ -7,6 +7,7 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
+ 
 /* animation de fondu au chargement de la page */
 @keyframes fade-in {
     from{
@@ -17,7 +18,7 @@
     } 
 }
 
-/* apparition des titres au scroll */
+/* apparition des titres */
 @keyframes wipe-enter{
     0%{
         transform: translateY(10rem);
@@ -38,17 +39,20 @@
     }
 }
 
+/* animation CSS + JS */
+
 @media (prefers-reduced-motion: no-preference) {
   .wipe-enter-animation {
     animation: wipe-enter 2000ms;
   }
 }
 
+/* animation CSS only */
 
 section, footer {
     animation: fade-in 1500ms forwards;
 }
 
-article.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
+.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
     animation: rotation-flowers 15s linear infinite;
 }

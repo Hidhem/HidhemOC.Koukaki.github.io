@@ -7,4 +7,89 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-#story { color: red !important; }
+
+
+#oscars__txt {
+    align-content: center;
+	margin: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1em 2em;
+	background-position: center;
+    background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
+}
+
+#oscars{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10rem;
+ }
+
+#oscars__title p{
+    color: #FFF5E9;
+	font-size: 42px;
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+    text-align: left;
+    padding: 2em 1em;
+    background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
+	background-repeat: no-repeat;
+    background-position: center;
+ }
+
+ #oscars__logo img{
+    padding: 8rem 0;
+    width: 75%;
+ }
+
+
+@media all and (max-width: 1192px) {
+	#oscars{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #oscars__logo img{
+        display: flex;
+        margin-inline: auto;
+        padding: 3em 0 0 0;
+        width: 50%;
+    }
+    #oscars__title p{
+        margin: 0;
+        padding: 3rem 3em;
+    }
+
+}
+
+
+@media all and (max-width: 920px) {
+    #oscars__title p{
+        font-size: 32px;
+        margin: 0;
+        padding: 3rem 2em;
+        background-size: cover;
+    }
+	
+}
+
+@media all and (max-width: 700px) {
+    #oscars__title p{
+        font-size: 22px;
+        margin: 0;
+        padding: 2rem 2em;
+        background-size: cover;
+    }	
+}
+
+ /* #oscars__title{
+    border: 2px solid red;
+        &__p{
+        color: #FFF5E9;
+	    font-size: 42px;
+        font-weight: 700;
+        font-family: "Quicksand", sans-serif;
+        text-align: left;
+        padding: 0 5rem;
+ }
+} */
