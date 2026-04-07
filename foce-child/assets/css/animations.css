@@ -28,6 +28,15 @@
     }
 }
 
+@keyframes wipe-enter-reverse{
+    0%{
+        transform: translateY(-5rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
 /* effet de rotation sur les fleurs */
 
 @keyframes rotation-flowers {
@@ -43,14 +52,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .wipe-enter-animation {
-    animation: wipe-enter 2000ms;
+    animation: wipe-enter 2000ms forwards;
+  }
+  .wipe-enter-animation-reverse{
+    animation: wipe-enter-reverse 2000ms forwards;
   }
 }
 
 /* animation CSS only */
 
-section, footer {
-    animation: fade-in 1500ms forwards;
+#primary, section{
+    animation: fade-in 2000ms forwards;
 }
 
 .story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{

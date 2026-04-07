@@ -8,7 +8,66 @@
  Version: 0.1
  */
 
+.banner{
+    display: flex;
+    position: relative;
+    transform: translateY(-5rem);
+}
 
+/* modification de l'article "L'histoire" */
+.story__story{
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.story h2{
+    position: relative;
+}
+
+.story h2::before {
+	content: url("./assets/images/sunflower_leaves.png");
+	position: absolute;
+	left: -8em;
+	top: 1.8em;
+	z-index: 0;
+}
+
+.story h2::after {
+	content: url("./assets/images/Sunflower.png");
+	position: absolute;
+	left: -7.4em;
+	top: 6em;
+}
+
+.story__article{
+    display: flex;
+    position: relative;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 50%;
+	font-size: 15px;
+	padding-bottom: 2em;
+}
+
+.story__article::before {
+	content: url("./assets/images/hibiscus_leaves.png");
+	position: absolute;
+	left: 50%;
+	top: -4em;
+	z-index: -1;
+}
+
+.story__article::after {
+	content: url("./assets/images/Hibiscus.png");
+	position: absolute;
+	left: calc(50% + 413px);
+	top: -10em;
+}
+
+/* Template partiel sur les oscars */
 #oscars__txt {
     align-content: center;
 	margin: 0;
