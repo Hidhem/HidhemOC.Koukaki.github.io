@@ -6,6 +6,10 @@ get_header();
     <main id="primary" class="site-main">
         <section id="banner" class="banner">
             <img id="banner__title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img id="banner__fallback-image" class="banner__fallback-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner.png"/>
+            <video autoplay muted loop id="banner__header-video" class="banner__header-video">
+                <source src="http://koukaki.local/wp-content/uploads/2026/03/StudioKoukaki-videoheadersansson1.mp4" type="video/mp4">
+            </video>
         </section>
         <section id="story" class="story">
 

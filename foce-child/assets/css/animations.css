@@ -37,6 +37,20 @@
     }
 }
 
+/* effet de flottement */
+
+@keyframes floating-elements {
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
 /* effet de rotation sur les fleurs */
 
 @keyframes rotation-flowers {
@@ -52,17 +66,25 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .wipe-enter-animation {
-    animation: wipe-enter 2000ms forwards;
+    animation: wipe-enter 2000ms 150ms forwards;
   }
   .wipe-enter-animation-reverse{
-    animation: wipe-enter-reverse 2000ms forwards;
+    animation: wipe-enter-reverse 2000ms 150ms forwards;
   }
 }
 
 /* animation CSS only */
 
+#banner__title{
+    animation: floating-elements 2000ms infinite ease-in-out;
+}
+
 #primary, section{
     animation: fade-in 2000ms forwards;
+}
+
+#banner__fallback-image{
+    animation: fade-in 1000ms 150ms reverse forwards;
 }
 
 .story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
