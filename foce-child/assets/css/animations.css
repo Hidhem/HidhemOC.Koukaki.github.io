@@ -75,16 +75,12 @@
 
 /* animation CSS only */
 
-#banner__title{
+#banner__title img{
     animation: floating-elements 2000ms infinite ease-in-out;
 }
 
-#primary, section{
+.banner__title{
     animation: fade-in 2000ms forwards;
-}
-
-#banner__fallback-image{
-    animation: fade-in 1000ms 150ms reverse forwards;
 }
 
 .story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{

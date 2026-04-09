@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(entries => {
 });
 
 
-const elements = document.querySelectorAll('#banner__title, #characters, #place, #studio, #oscars, footer, #story__title h2, #story__article');
+const elements = document.querySelectorAll('#banner__title img, .characters, .place, #studio, #oscars, footer, #story__title h2, #story__article');
 
 elements.forEach((element) => observer.observe(element));
 
@@ -29,6 +29,6 @@ const observerReverse = new IntersectionObserver(entries => {
 });
 
 
-const element = document.querySelectorAll('#banner, #studio p, #story__article p, #place p');
+const element = document.querySelectorAll('.banner__header-video, #studio p, #story__article p, #place p');
 
 element.forEach((element) => observerReverse.observe(element));

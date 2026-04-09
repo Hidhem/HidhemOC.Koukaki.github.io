@@ -4,19 +4,33 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
+        
         <section id="banner" class="banner">
-            <img id="banner__title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-            <img id="banner__fallback-image" class="banner__fallback-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner.png"/>
-            <video autoplay muted loop id="banner__header-video" class="banner__header-video">
+
+            <div id="banner__fallback-title" class="banner__fallback-title">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> 
+                " alt="logo Fleurs d'oranger & chats errants"/>
+            </div>
+            <div id="banner__fallback-title-back" class="banner__fallback-title-back">    
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> 
+                " alt="logo Fleurs d'oranger & chats errants"/>
+            </div>
+            <div id="banner__fallback-image" class="banner__fallback-image">    
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/banner.png"/>
+            </div>
+
+            <div id="banner__title" class="banner__title">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> 
+                " alt="logo Fleurs d'oranger & chats errants"/>
+            </div>
+
+            <div id="banner__header-video" class="banner__header-video">
+                <video autoplay muted loop>
                 <source src="http://koukaki.local/wp-content/uploads/2026/03/StudioKoukaki-videoheadersansson1.mp4" type="video/mp4">
             </video>
+            </div>
         </section>
         <section id="story" class="story">
-
-            <!-- <h2>L'histoire</h2>
-            <article id="story__article" class="story__article">
-                <p><?php echo get_theme_mod('story'); ?></p>
-            </article> -->
             
             <article id="story__story" class="story__story">
                 <div id="story__title" class="story__title">
@@ -37,7 +51,7 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters">
+            <article id="characters" class="characters">
                 <div class="main-character">
                     <h3>Les personnages</h3>
                     <?php
@@ -63,7 +77,7 @@ get_header();
                     ?>
                 </div>
             </article>
-            <article id="place">
+            <article id="place" class="place">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
@@ -73,7 +87,7 @@ get_header();
         </section>
 
 
-        <section id="studio">
+        <section id="studio" class="studio">
             <h2>Studio Koukaki</h2>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
