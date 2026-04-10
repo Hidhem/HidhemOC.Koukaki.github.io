@@ -8,7 +8,8 @@
  Version: 0.1
  */
  
-/* animation de fondu au chargement de la page */
+/* fade in when page loading */
+
 @keyframes fade-in {
     from{
         opacity: 0;
@@ -18,7 +19,7 @@
     } 
 }
 
-/* apparition des titres */
+/* wipe effect */
 @keyframes wipe-enter{
     0%{
         transform: translateY(10rem);
@@ -37,7 +38,7 @@
     }
 }
 
-/* effet de flottement */
+/* floating effect */
 
 @keyframes floating-elements {
     0%{
@@ -51,7 +52,7 @@
     }
 }
 
-/* effet de rotation sur les fleurs */
+/* flowers rotation effect */
 
 @keyframes rotation-flowers {
     from{
@@ -60,6 +61,26 @@
     to{
         transform: rotate(360deg);
     }
+}
+
+/* loading effect for title fallback */
+
+@keyframes loading-fallbackTitle{
+    0% {
+    clip-path: inset(100% 0 0 0);
+  }
+    15% {
+    clip-path: inset(86% 0 0 0);
+  }
+    67% {
+    clip-path: inset(45% 0 0 0);
+  }
+    95% {
+    clip-path: inset(25% 0 0 0);
+  }
+    100% {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 /* animation CSS + JS */
@@ -76,13 +97,20 @@
 /* animation CSS only */
 
 #banner__title img{
-    animation: floating-elements 2000ms infinite ease-in-out;
+    animation: floating-elements 2000ms infinite ease-in-out,
+    fade-in 2000ms forwards;;
 }
 
-.banner__title{
-    animation: fade-in 2000ms forwards;
+#wrapper__video, #story, .studio h2, .studio div, #oscars, .colophon{
+    animation: fade-in 2000ms  forwards;
 }
 
 .story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
     animation: rotation-flowers 15s linear infinite;
 }
+
+.banner__fallback-title{
+    animation: loading-fallbackTitle 1800ms cubic-bezier(.96,-0.01,0,1.01);
+}
+
+

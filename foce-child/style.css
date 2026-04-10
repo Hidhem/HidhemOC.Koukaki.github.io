@@ -8,39 +8,52 @@
  Version: 0.1
  */
 
- /* modification banner */
+.wrapper__title{
+    position: absolute;
+    justify-items: center;
+    align-content: center;
+    inset: 0;
+    z-index: 2;
+}
+
+.wrapper__video {
+    position: absolute;
+    inset: 0;
+}
+
+ /* banner modification */
+
+h2{
+    background-color: rgba(255, 255, 255, 0);
+}
 
 .banner{
     display: flex;
     background: none;
     position: relative;
-}
-
-.banner__title{
-    position: absolute;
-    justify-content: center;
-    z-index: 2;
+    overflow: hidden;
 }
 
 .banner__title img{
-    display: flex;
-    margin-inline: auto;
-    width: 80%;
+    display: block;
+    width: 100%;
 }
 
 .banner__header-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner__header-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
 }
 
-/* image en fallback sur le banner */
+/* fallback image for banner */
 
-/* .banner__fallback-title{
+.banner__fallback-title{
     position: absolute;
     justify-content: center;
     z-index: 5;
@@ -49,7 +62,7 @@
 .banner__fallback-title img{
     display: flex;
     margin-inline: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .banner__fallback-title-back{
@@ -61,7 +74,7 @@
 .banner__fallback-title-back img{
     display: flex;
     margin-inline: auto;
-    width: 80%;
+    width: 100%;
     filter: saturate(0);
 }
 
@@ -72,10 +85,10 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-} */
+}
 
 
-/* modification de l'article "L'histoire" */
+/* article modification for "L'histoire" */
 .story__story{
     position: relative;
 	display: flex;
@@ -128,7 +141,7 @@
 	top: -10em;
 }
 
-/* Template partiel sur les oscars */
+/* oscars partial template */
 #oscars__txt {
     align-content: center;
 	margin: 0;
@@ -242,15 +255,3 @@
         background-size: cover;
     }	
 }
-
- /* #oscars__title{
-    border: 2px solid red;
-        &__p{
-        color: #FFF5E9;
-	    font-size: 42px;
-        font-weight: 700;
-        font-family: "Quicksand", sans-serif;
-        text-align: left;
-        padding: 0 5rem;
- }
-} */
