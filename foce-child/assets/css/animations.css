@@ -113,4 +113,8 @@
     animation: loading-fallbackTitle 1800ms cubic-bezier(.96,-0.01,0,1.01);
 }
 
+.banner__fallback-title img,.banner__fallback-title-back img, .banner__fallback-image img{
+    animation: fade-in reverse 500ms 1800ms forwards;
+}
+
 
