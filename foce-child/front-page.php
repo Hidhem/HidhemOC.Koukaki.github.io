@@ -59,30 +59,13 @@ get_header();
             ?>
             <article id="characters" class="characters">
                 <div class="main-character">
-                    <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
-                    echo '<figure>';
-                    echo get_the_post_thumbnail( $main_character->ID, 'full' );
-                    echo '<figcaption>'. $main_character->post_title . '</figcaption>';
-                    echo '</figure>';
-                    $characters_query->next_post();
-                    ?>
+                    <h3>Les personnages</h3> 
                 </div>
                 <div class="other-characters">
-                    <?php
-                    while ( $characters_query->have_posts() ) {
-                        $characters_query->the_post();
-                        echo '<figure>';
-                        echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                        echo '<figcaption>';
-                        the_title();
-                        echo'</figcaption>';
-                        echo '</figure>';
-                    }
-                    ?>
+                    <?php get_template_part( 'assets/parts/characters' ); ?>  
                 </div>
             </article>
+            
             <article id="place" class="place">
                 <div>
                     <h3>Le Lieu</h3>
@@ -91,6 +74,8 @@ get_header();
 
             </article>
         </section>
+
+
 
 
         <section id="studio" class="studio">
@@ -102,5 +87,8 @@ get_header();
             <?php get_template_part( 'assets/parts/oscars' ); ?>
         </section>
     </main><!-- #main -->
+
+    <!-- Custom SwiperJs -->
+     <script src="/assets/js/swiper.js"></script>
 <?php
 get_footer();

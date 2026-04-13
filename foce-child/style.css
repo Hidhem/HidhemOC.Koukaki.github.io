@@ -175,6 +175,36 @@ h2{
     width: 75%;
  }
 
+ /* swiper modification */
+
+.characters{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.swiper-slide {
+    flex-direction: column;
+    justify-items: center;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: fit-content;
+    height: 80%;
+    object-fit: cover;
+}
+
+.swiper-slide p{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
 
 @media all and (max-width: 1192px) {
 
