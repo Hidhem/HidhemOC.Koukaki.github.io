@@ -34,13 +34,27 @@ const element = document.querySelectorAll('.banner__header-video, #studio p, #st
 element.forEach((element) => observerReverse.observe(element));
 
 
-// parallax effect
+// parallax effect Y
 
 const bannerVideo = document.getElementById("wrapper__video");
 const bannerTitle = document.getElementById("wrapper__title");
 
 window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  bannerVideo.style.transform = "translateY(" + offset * 0.5 + "px)";
-  bannerTitle.style.transform = "translateY(" + offset * -0.5 + "px)";
+  let offsetY = window.pageYOffset;
+  bannerVideo.style.transform = "translateY(" + offsetY * 0.5 + "px)";
+  bannerTitle.style.transform = "translateY(" + offsetY * -0.5 + "px)";
+});
+
+
+// parallax effect X
+
+const placeCloud = document.getElementById("swiper__cloud");
+const placeSection = document.getElementById("place");
+
+window.addEventListener("scroll", function () {
+  let scrollY = window.pageYOffset;
+  const sectionTop = placeSection.offsetTop;
+  let relativeScroll = scrollY - sectionTop;
+  let move = Math.max(0, Math.min(relativeScroll * 0.3, 300));
+  placeCloud.style.transform = `translateX(${-move}px)`;
 });

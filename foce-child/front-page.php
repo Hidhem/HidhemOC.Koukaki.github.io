@@ -30,7 +30,7 @@ get_header();
             <div id="wrapper__video" class="wrapper__video">
                 <div id="banner__header-video" class="banner__header-video">
                     <video autoplay muted loop>
-                    <source src="http://koukaki.local/wp-content/uploads/2026/03/StudioKoukaki-videoheadersansson1.mp4" type="video/mp4">
+                        <source src="http://koukaki.local/wp-content/uploads/2026/03/StudioKoukaki-videoheadersansson1.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -68,6 +68,14 @@ get_header();
             
             <article id="place" class="place">
                 <div>
+                    <div id="swiper__cloud" class="swiper__cloud">
+                        <div id="place__cloud" class="place__cloud">
+                            <img id="place__big-cloud" class="place__big-cloud" src="http://koukaki.local/wp-content/uploads/2026/03/big_cloud.png" 
+                            alt="grand nuage parallax" />
+                            <img id="place__little-cloud" class="place__little-cloud" src="http://koukaki.local/wp-content/uploads/2026/03/little_cloud.png" 
+                            alt="grand nuage parallax" />
+                        </div>
+                    </div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
