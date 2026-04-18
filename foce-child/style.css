@@ -8,6 +8,124 @@
  Version: 0.1
  */
 
+/* burger menu button */
+
+.site-navigation{
+    position: relative;
+}
+
+.navigation__burger{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    right: 10rem;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.burger__top, .burger__mid, .burger__bottom{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+/* burger menu modification */
+#nav__burger-menu{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 61rem;
+    padding-top: 47px;
+    background-color: #FFF5E9;
+    overflow: hidden;
+    transition: 200ms;
+}
+
+#burger-menu__logo img{
+    width: 154px;
+    height: 95px;
+    background: none;
+    /* box-shadow: 0 0 20px 0px #FF5C0099; */
+}
+
+#burger-menu__list ul{
+    display: flex;
+    flex-direction: column;
+}
+
+#burger-menu__list li{
+    font-weight: 400;
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+#burger-menu__list li:hover, a:hover, a:focus, a:active{
+    text-shadow: 0px 0px 14px #ff5c00;
+    color: black !important;
+}
+
+#burger-menu__name{
+    margin-top: 7rem;
+}
+
+#burger-menu__hibiscus{
+    position: relative;
+    bottom: 22rem;
+    left: 51rem;
+}
+
+#burger-menu__flower{
+    position: relative;
+    width: 70px;
+    bottom: 17rem;
+    right: 17rem;
+}
+
+#burger-menu__black-cat{
+    position: absolute;
+    bottom: 20rem;
+    left: 76rem;
+}
+
+#burger-menu__orange-cat{
+    position: absolute;
+    bottom: 6rem;
+    left: 6rem;
+}
+
+#burger-menu__purple-cat{
+    position: absolute;
+    bottom: 44rem;
+    left: 21rem;
+}
+
+#burger-menu__orchid{
+    position: absolute;
+    bottom: 47rem;
+    right: 95rem;
+}
+
+#burger-menu__random_flower{
+    position: absolute;
+    bottom: 31rem;
+    left: 100rem;
+    width: 75.75px;
+    height: 74.53px;
+}
+
+#burger-menu__Sunflower{
+    position: absolute;
+    bottom: 43rem;
+    left: 77rem;
+}
+
+/* wrapper modification */
+
 .wrapper__title{
     position: absolute;
     justify-items: center;

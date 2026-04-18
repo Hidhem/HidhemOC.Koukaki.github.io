@@ -35,12 +35,16 @@
                 <span class="line"></span>
             </button>
             <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
+                <span id="navigation__burger" class="navigation__burger">
+                    <div id="burger__top" class="burger__top"></div>
+                    <div id="burger__mid" class="burger__mid"></div>
+                    <div id="burger__bottom" class="burger__bottom"></div>
+                </span>
                 <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
             </ul>
+            <div id="nav__burger-menu" class="nav__burger-menu">
+                <?php get_template_part( 'assets/parts/burgerMenu' ); ?>
+            </div>
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

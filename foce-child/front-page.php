@@ -58,10 +58,10 @@ get_header();
             $characters_query = new WP_Query($args);
             ?>
             <article id="characters" class="characters">
-                <div class="main-character">
+                <div id="main-character" class="main-character">
                     <h3>Les personnages</h3> 
                 </div>
-                <div class="other-characters">
+                <div id="other-characters" class="other-characters">
                     <?php get_template_part( 'assets/parts/characters' ); ?>  
                 </div>
             </article>
@@ -83,9 +83,6 @@ get_header();
             </article>
         </section>
 
-
-
-
         <section id="studio" class="studio">
             <h2>Studio Koukaki</h2>
             <div>
@@ -97,6 +94,6 @@ get_header();
     </main><!-- #main -->
 
     <!-- Custom SwiperJs -->
-     <script src="/assets/js/swiper.js"></script>
+     <!-- <script src="/assets/js/swiper.js"></script> -->
 <?php
 get_footer();

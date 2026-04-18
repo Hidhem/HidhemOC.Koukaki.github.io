@@ -5,8 +5,6 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('wipe-enter-animation');
       return;
     }
-
-    entry.target.classList.remove('wipe-enter-animation');
   });
 });
 
@@ -24,7 +22,6 @@ const observerReverse = new IntersectionObserver(entries => {
       return;
     }
 
-    entry.target.classList.remove('wipe-enter-animation-reverse');
   });
 });
 
@@ -58,3 +55,20 @@ window.addEventListener("scroll", function () {
   let move = Math.max(0, Math.min(relativeScroll * 0.3, 300));
   placeCloud.style.transform = `translateX(${-move}px)`;
 });
+
+
+// burger menu animation
+
+const burgerButton = document.getElementById("navigation__burger").addEventListener("click", function () {
+  const burgerMenu = document.getElementById("nav__burger-menu")
+    console.log("j'ai appuyer sur le burger")
+    burgerMenu.style.display = "flex"
+    burgerMenu.style.transition = "200ms";
+})
+
+const burgerMenuItem = document.getElementById("burger-menu__list").addEventListener("click", function () {
+  console.log("j'ai appuyer sur un item")
+  const burgerMenu = document.getElementById("nav__burger-menu")
+    burgerMenu.style.display = "none",
+    burgerMenu.style.transition = "200ms";
+})

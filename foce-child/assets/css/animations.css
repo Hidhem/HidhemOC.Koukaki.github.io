@@ -96,16 +96,17 @@
 
 /* animation CSS only */
 
-#banner__title img{
-    animation: floating-elements 2000ms infinite ease-in-out,
-    fade-in 2000ms forwards;;
+#banner__title img, #burger-menu__orange-cat, #burger-menu__black-cat, #burger-menu__purple-cat{
+    animation: floating-elements 2000ms infinite ease-in-out;
 }
 
 #wrapper__video, #story, .studio h2, .studio div, #oscars, .colophon{
     animation: fade-in 2000ms  forwards;
 }
 
-.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , footer#colophon.site-footer::after{
+.story__article::after, h2::after, #studio h2::before, ul::after,footer#colophon.site-footer::before , 
+footer#colophon.site-footer::after, #burger-menu__hibiscus, #burger-menu__flower, #burger-menu__orchid,
+#burger-menu__random_flower, #burger-menu__Sunflower{
     animation: rotation-flowers 15s linear infinite;
 }
 
