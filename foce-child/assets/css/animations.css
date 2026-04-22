@@ -100,7 +100,7 @@
     animation: floating-elements 2000ms infinite ease-in-out;
 }
 
-#wrapper__video, #story, .studio h2, .studio div, #oscars, .colophon{
+.banner ,#wrapper__video, #story, .studio h2, .studio div, #oscars, .site-footer{
     animation: fade-in 2000ms  forwards;
 }
 

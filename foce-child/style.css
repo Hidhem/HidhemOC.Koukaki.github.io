@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
  Theme URI: https://www.koukaki.local
@@ -7,486 +8,576 @@
  Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
  Version: 0.1
  */
-
 /* burger menu button */
-
-.site-navigation{
-    position: relative;
+.site-navigation {
+  position: relative;
 }
 
-.navigation__burger{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40px;
-    height: 100%;
-    right: 10rem;
-    gap: 10px;
-    cursor: pointer;
+.navigation__burger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 25px;
+  right: 10rem;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navigation__burger:hover {
+  height: 30px;
+  gap: 6px;
+}
+.navigation__burger .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: 0.3s;
 }
 
-.burger__top, .burger__mid, .burger__bottom{
-    width: 100%;
-    height: 2px;
-    background-color: black;
+.navigation__burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 8px);
+  transition: 0.3s;
+}
+
+.navigation__burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navigation__burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.3s;
 }
 
 /* burger menu modification */
-#nav__burger-menu{
-    display: none;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 61rem;
-    padding-top: 47px;
-    background-color: #FFF5E9;
-    overflow: hidden;
-    transition: 200ms;
+.nav__burger-menu {
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  width: 100%;
+  height: 61rem;
+  padding-top: 47px;
+  background-color: #FFF5E9;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
-#burger-menu__logo img{
-    width: 154px;
-    height: 95px;
-    background: none;
-    /* box-shadow: 0 0 20px 0px #FF5C0099; */
+.nav__burger-menu.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-#burger-menu__list ul{
-    display: flex;
-    flex-direction: column;
+.burger-menu__logo img {
+  width: 154px;
+  height: 95px;
 }
 
-#burger-menu__list li{
-    font-weight: 400;
-    font-size: 64px;
-    margin: 10px 0;
+.burger-menu__list ul {
+  display: flex;
+  flex-direction: column;
+}
+.burger-menu__list li {
+  font-weight: 400;
+  font-size: 64px;
+  margin: 10px 0;
+}
+.burger-menu__list li:hover, .burger-menu__list a:hover, .burger-menu__list a:focus, .burger-menu__list a:active {
+  text-shadow: 0px 0px 14px #ff5c00;
+  color: black !important;
 }
 
-#burger-menu__list li:hover, a:hover, a:focus, a:active{
-    text-shadow: 0px 0px 14px #ff5c00;
-    color: black !important;
+.burger-menu__name {
+  margin-top: 7rem;
 }
 
-#burger-menu__name{
-    margin-top: 7rem;
+.burger-menu__hibiscus {
+  position: relative;
+  bottom: 20rem;
+  left: 80rem;
 }
 
-#burger-menu__hibiscus{
-    position: relative;
-    bottom: 22rem;
-    left: 51rem;
+.burger-menu__flower {
+  position: relative;
+  width: 70px;
+  bottom: 17rem;
+  right: 17rem;
 }
 
-#burger-menu__flower{
-    position: relative;
-    width: 70px;
-    bottom: 17rem;
-    right: 17rem;
+.burger-menu__black-cat {
+  position: absolute;
+  bottom: 20rem;
+  left: 76rem;
 }
 
-#burger-menu__black-cat{
-    position: absolute;
-    bottom: 20rem;
-    left: 76rem;
+.burger-menu__orange-cat {
+  position: absolute;
+  bottom: 6rem;
+  left: 6rem;
 }
 
-#burger-menu__orange-cat{
-    position: absolute;
-    bottom: 6rem;
-    left: 6rem;
+.burger-menu__purple-cat {
+  position: absolute;
+  bottom: 44rem;
+  left: 21rem;
 }
 
-#burger-menu__purple-cat{
-    position: absolute;
-    bottom: 44rem;
-    left: 21rem;
+.burger-menu__orchid {
+  position: absolute;
+  bottom: 47rem;
+  right: 95rem;
 }
 
-#burger-menu__orchid{
-    position: absolute;
-    bottom: 47rem;
-    right: 95rem;
+.burger-menu__random_flower {
+  position: absolute;
+  bottom: 31rem;
+  left: 100rem;
+  width: 75.75px;
+  height: 74.53px;
 }
 
-#burger-menu__random_flower{
-    position: absolute;
-    bottom: 31rem;
-    left: 100rem;
-    width: 75.75px;
-    height: 74.53px;
-}
-
-#burger-menu__Sunflower{
-    position: absolute;
-    bottom: 43rem;
-    left: 77rem;
+.burger-menu__Sunflower {
+  position: absolute;
+  bottom: 43rem;
+  left: 77rem;
 }
 
 /* wrapper modification */
-
-.wrapper__title{
-    position: absolute;
-    justify-items: center;
-    align-content: center;
-    inset: 0;
-    z-index: 2;
+.wrapper__title {
+  position: absolute;
+  justify-items: center;
+  align-content: center;
+  inset: 0;
+  z-index: 2;
 }
 
 .wrapper__video {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 }
 
- /* banner modification */
-
-h2{
-    background-color: rgba(255, 255, 255, 0);
+/* banner modification */
+h2 {
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.banner{
-    display: flex;
-    background: none;
-    position: relative;
-    overflow: hidden;
+.banner {
+  display: flex;
+  background: none;
+  position: relative;
+  overflow: hidden;
 }
-
-.banner__title img{
-    display: block;
-    width: 100%;
+.banner__title img {
+  display: block;
+  width: 100%;
 }
-
 .banner__header-video {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
 .banner__header-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* fallback image for banner */
-
-.banner__fallback-title{
-    position: absolute;
-    justify-content: center;
-    z-index: 5;
+.banner__fallback-title {
+  position: absolute;
+  justify-content: center;
+  z-index: 5;
 }
-
-.banner__fallback-title img{
-    display: flex;
-    margin-inline: auto;
-    width: 100%;
+.banner__fallback-title img {
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
 }
-
-.banner__fallback-title-back{
-    position: absolute;
-    justify-content: center;
-    z-index: 4;
+.banner__fallback-title-back {
+  position: absolute;
+  justify-content: center;
+  z-index: 4;
 }
-
-.banner__fallback-title-back img{
-    display: flex;
-    margin-inline: auto;
-    width: 100%;
-    filter: saturate(0);
+.banner__fallback-title-back img {
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
+  filter: saturate(0);
 }
-
-.banner__fallback-image img{
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
+.banner__fallback-image img {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
-
 
 /* article modification for "L'histoire" */
-.story__story{
-    position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.story__story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.story h2{
-    position: relative;
-}
-
 .story h2::before {
-	content: url("./assets/images/sunflower_leaves.png");
-	position: absolute;
-	left: -8em;
-	top: 1.8em;
-	z-index: 0;
+  content: url("./assets/images/sunflower_leaves.png");
+  position: absolute;
+  left: -8em;
+  top: 1.8em;
+  z-index: 0;
 }
-
 .story h2::after {
-	content: url("./assets/images/Sunflower.png");
-	position: absolute;
-	left: -7.4em;
-	top: 6em;
+  content: url("./assets/images/Sunflower.png");
+  position: absolute;
+  left: -7.4em;
+  top: 6em;
 }
 
-.story__article{
-    display: flex;
-    position: relative;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	width: 50%;
-	font-size: 15px;
-	padding-bottom: 2em;
+.story__article {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  font-size: 15px;
+  padding-bottom: 2em;
 }
-
 .story__article::before {
-	content: url("./assets/images/hibiscus_leaves.png");
-	position: absolute;
-	left: 50%;
-	top: -4em;
-	z-index: -1;
+  content: url("./assets/images/hibiscus_leaves.png");
+  position: absolute;
+  left: 50%;
+  top: -4em;
+  z-index: -1;
 }
-
 .story__article::after {
-	content: url("./assets/images/Hibiscus.png");
-	position: absolute;
-	left: calc(50% + 413px);
-	top: -10em;
+  content: url("./assets/images/Hibiscus.png");
+  position: absolute;
+  left: calc(50% + 413px);
+  top: -10em;
 }
 
 /* place article modification */
-.place{
-    position: relative;
-    display: flex;
-    background-image: url("./assets/images/Studio_Koukaki-image_place.png") !important;
-    width: 100%;
-    min-height: 699px;
-    background-size: cover;
+.place {
+  position: relative;
+  display: flex;
+  background-image: url("./assets/images/Studio_Koukaki-image_place.png") !important;
+  width: 100%;
+  min-height: 699px;
+  background-size: cover;
+}
+.place__big-cloud {
+  width: 316px;
+  height: 122px;
+  right: 0;
+  filter: blur(1rem);
+  position: absolute;
+}
+.place__little-cloud {
+  width: 142px;
+  height: 55px;
+  top: 13rem;
+  right: 29rem;
+  filter: blur(1rem);
+  position: absolute;
 }
 
-.swiper__cloud{
-    width: 39rem;
-    height: 17rem;
-    top: 5rem;
-    right: 6rem;
-    position: absolute;
-}
-
-.place__big-cloud{
-    width: 316px;
-    height: 122px;
-    right: 0;
-    filter: blur(1rem);
-    position: absolute;
-}
-
-.place__little-cloud{
-    width: 142px;
-    height: 55px;
-    top: 13rem;
-    right: 29rem;
-    filter: blur(1rem);
-    position: absolute;
+.swiper__cloud {
+  width: 39rem;
+  height: 17rem;
+  top: 5rem;
+  right: 6rem;
+  position: absolute;
 }
 
 /* oscars partial template */
-#oscars__txt {
-    align-content: center;
-	margin: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 1em 2em;
-	background-position: center;
-    background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
+.oscars {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10rem;
+}
+.oscars__txt {
+  align-content: center;
+  margin: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1em 2em;
+  background-position: center;
+  background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
+}
+.oscars__title p {
+  color: #FFF5E9;
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+  padding: 2em 1em;
+  background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.oscars__logo img {
+  padding: 8rem 0;
+  width: 75%;
 }
 
-#oscars{
-    display: flex;
-    flex-direction: row;
-    margin: 0 10rem;
- }
-
-#oscars__title p{
-    color: #FFF5E9;
-	font-size: 42px;
-    font-weight: 700;
-    font-family: "Quicksand", sans-serif;
-    text-align: left;
-    padding: 2em 1em;
-    background-image: url("http://koukaki.local/wp-content/uploads/2026/04/Rectangle-23.png");
-	background-repeat: no-repeat;
-    background-position: center;
- }
-
- #oscars__logo img{
-    padding: 8rem 0;
-    width: 75%;
- }
-
- /* swiper modification */
-
-.characters{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+/* swiper modification */
+.characters {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
 
 .swiper-slide {
-    flex-direction: column;
-    justify-items: center;
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+  flex-direction: column;
+  justify-items: center;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
-
 .swiper-slide img {
-    display: block;
-    width: fit-content;
-    height: 80%;
-    object-fit: cover;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swiper-slide p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
-.swiper-slide p{
+@media all and (max-width: 1192px) {
+  .nav__burger-menu {
+    justify-content: center;
+    width: 100%;
+    height: 56rem;
+    padding-top: 47px;
+  }
+  .burger-menu__list li {
+    font-weight: 300;
+    font-size: 50px;
+    margin: 10px 0;
+  }
+  .burger-menu__hibiscus {
+    bottom: 14rem;
+    left: 67rem;
+    width: 41%;
+  }
+  .burger-menu__flower {
+    bottom: 13rem;
+    right: 15rem;
+    width: 10%;
+  }
+  .burger-menu__black-cat {
+    bottom: 25rem;
+    left: 62rem;
+    width: 8%;
+  }
+  .burger-menu__orange-cat {
+    bottom: 8rem;
+    left: 7rem;
+    width: 6%;
+  }
+  .burger-menu__purple-cat {
+    bottom: 40rem;
+    left: 17rem;
+    width: 8%;
+  }
+  .burger-menu__orchid {
+    bottom: 42rem;
+    right: 78rem;
+    width: 13%;
+  }
+  .burger-menu__random_flower {
+    bottom: 31rem;
+    left: 82rem;
+    width: 7%;
+  }
+  .burger-menu__Sunflower {
+    bottom: 41rem;
+    left: 61rem;
+    width: 10%;
+  }
+  .characters {
+    width: 100%;
+  }
+  .story__article::after {
+    left: calc(50% + 405px);
+  }
+  .story__article::before {
+    left: 48%;
+  }
+  .banner__fallback-image img {
+    top: 7rem;
+    width: 85rem;
+    height: 60rem;
+  }
+  .banner__header-video {
+    transform: scale(1);
+  }
+  .story__title h2::before {
+    right: 50%;
+    z-index: -1;
+  }
+  .story__article p::before {
+    left: 50%;
+    z-index: -1;
+  }
+  .story__title h2::after {
+    right: 100%;
+  }
+  .oscars {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .oscars__logo img {
+    display: flex;
+    margin-inline: auto;
+    padding: 3em 0 0 0;
+    width: 50%;
+  }
+  .oscars__title p {
+    margin: 0;
+    padding: 3rem 3em;
+  }
+}
+@media all and (max-width: 920px) {
+  .burger-menu__hibiscus {
+    bottom: 14rem;
+    left: 52rem;
+  }
+  .burger-menu__flower {
+    bottom: 11rem;
+    left: -11rem;
+    width: 14%;
+  }
+  .burger-menu__black-cat {
+    bottom: 25rem;
+    left: 53rem;
+  }
+  .burger-menu__orange-cat {
+    bottom: 8rem;
+    left: 7rem;
+  }
+  .burger-menu__purple-cat {
+    bottom: 35rem;
+    left: 11rem;
+  }
+  .burger-menu__orchid {
+    bottom: 43rem;
+    right: 61rem;
+  }
+  .burger-menu__random_flower {
+    bottom: 31rem;
+    left: 63rem;
+    width: 8%;
+  }
+  .burger-menu__Sunflower {
+    bottom: 41rem;
+    left: 50rem;
+  }
+  .characters {
+    width: 100%;
+  }
+  .banner__fallback-image img {
+    top: 6rem;
+    width: 85rem;
+    height: 55rem;
+  }
+  .banner__header-video video {
+    width: 100%;
+    height: 89%;
+  }
+  .swiper-slide {
+    width: 150px;
+    height: 150px;
+  }
+  .swiper-slide img {
+    height: 90%;
+  }
+  .swiper-slide p {
     display: flex;
     justify-content: center;
     margin: 0;
+  }
+  .banner__header-video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 59rem;
+  }
+  .story__title h2::before, .story__title h2::after, .story__article::before, .story__article::after {
+    content: none;
+  }
+  .oscars__title p {
+    font-size: 32px;
+    margin: 0;
+    padding: 3rem 2em;
+    background-size: cover;
+  }
 }
-
-
-@media all and (max-width: 1192px) {
-
-    .characters{
-        width: 100%;
-    }
-
-    .story__article::after{
-        left: calc(50% + 405px);
-    }
-
-    .story__article::before{
-        left: 48%;
-    }
-
-    .banner__fallback-image img{
-        top: 7rem;
-        width: 85rem;
-        height: 60rem;
-    }
-
-    #banner__header-video {
-        transform: scale(1);
-    }
-
-
-    .story__title h2::before{
-        right: 50%;
-        z-index: -1;
-    }
-
-    .story__article p::before{
-        left: 50%;
-        z-index: -1;
-    }
-
-    .story__title h2::after{
-        right: 100%;
-    }
-
-	#oscars{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    #oscars__logo img{
-        display: flex;
-        margin-inline: auto;
-        padding: 3em 0 0 0;
-        width: 50%;
-    }
-    #oscars__title p{
-        margin: 0;
-        padding: 3rem 3em;
-    }
-
-}
-
-
-@media all and (max-width: 920px) {
-
-    .characters{
-        width: 100%;
-    }
-
-    .banner__fallback-image img{
-        top: 6rem;
-        width: 85rem;
-        height: 55rem;
-    }
-
-    .banner__header-video video {
-        width: 100%;
-        height: 89%;
-    }
-
-    .swiper-slide {
-        width: 150px;
-        height: 150px;
-    }
-
-    .swiper-slide img {
-        height: 90%;
-    }
-
-    .swiper-slide p{
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
-    #banner__header-video {
-        object-fit: cover;
-        transform: scale(1);
-    }
-
-    .story__title h2::before, .story__title h2::after, .story__article::before, .story__article::after {
-        content: none;
-    }
-
-    #oscars__title p{
-        font-size: 32px;
-        margin: 0;
-        padding: 3rem 2em;
-        background-size: cover;
-    }
-	
-}
-
 @media all and (max-width: 700px) {
-
-    .characters{
-        width: 100%;
-    }
-
-    #banner__header-video {
-        object-fit:cover;
-        object-position: center top;
-        transform: scale(1);
-    }
-
-    .story__title h2::before, .story__title h2::after, .story__article::before, .story__article::after {
-        content: none;
-    }
-
-    #oscars__title p{
-        font-size: 22px;
-        margin: 0;
-        padding: 2rem 2em;
-        background-size: cover;
-    }	
-}
+  .navigation__burger {
+    right: 4rem;
+  }
+  .burger-menu__hibiscus {
+    bottom: 9rem;
+    left: 39rem;
+  }
+  .burger-menu__flower {
+    bottom: 11rem;
+    left: -3rem;
+    width: 13%;
+  }
+  .burger-menu__black-cat {
+    bottom: 26rem;
+    left: 41rem;
+  }
+  .burger-menu__orange-cat {
+    bottom: 14rem;
+    left: 3rem;
+  }
+  .burger-menu__purple-cat {
+    bottom: 42rem;
+    left: 7rem;
+  }
+  .burger-menu__orchid {
+    bottom: 45rem;
+    right: 46rem;
+  }
+  .burger-menu__random_flower {
+    bottom: 32rem;
+    left: 47rem;
+    width: 11%;
+  }
+  .burger-menu__Sunflower {
+    bottom: 41rem;
+    left: 40rem;
+  }
+  .characters {
+    width: 100%;
+  }
+  .banner__header-video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center top;
+       object-position: center top;
+    transform: scale(1);
+  }
+  .story__title h2::before, .story__title h2::after, .story__article::before, .story__article::after {
+    content: none;
+  }
+  .oscars__title p {
+    font-size: 22px;
+    margin: 0;
+    padding: 2rem 2em;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=style.css.map */

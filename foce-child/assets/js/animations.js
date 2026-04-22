@@ -8,7 +8,6 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-
 const elements = document.querySelectorAll('.banner__title, .characters, .place, #studio, #oscars, footer, #story__title h2, #story__article');
 
 elements.forEach((element) => observer.observe(element));
@@ -25,11 +24,9 @@ const observerReverse = new IntersectionObserver(entries => {
   });
 });
 
-
 const element = document.querySelectorAll('.banner__header-video, #studio p, #story__article p, #place p');
 
 element.forEach((element) => observerReverse.observe(element));
-
 
 // parallax effect Y
 
@@ -42,8 +39,7 @@ window.addEventListener("scroll", function () {
   bannerTitle.style.transform = "translateY(" + offsetY * -0.5 + "px)";
 });
 
-
-// parallax effect X
+// parallax effect X 0 to 300px
 
 const placeCloud = document.getElementById("swiper__cloud");
 const placeSection = document.getElementById("place");
@@ -56,19 +52,21 @@ window.addEventListener("scroll", function () {
   placeCloud.style.transform = `translateX(${-move}px)`;
 });
 
-
 // burger menu animation
 
-const burgerButton = document.getElementById("navigation__burger").addEventListener("click", function () {
-  const burgerMenu = document.getElementById("nav__burger-menu")
-    console.log("j'ai appuyer sur le burger")
-    burgerMenu.style.display = "flex"
-    burgerMenu.style.transition = "200ms";
-})
+const burgerButton = document.getElementById("navigation__burger");
+const burgerMenu = document.getElementById("nav__burger-menu");
 
-const burgerMenuItem = document.getElementById("burger-menu__list").addEventListener("click", function () {
-  console.log("j'ai appuyer sur un item")
-  const burgerMenu = document.getElementById("nav__burger-menu")
-    burgerMenu.style.display = "none",
-    burgerMenu.style.transition = "200ms";
-})
+burgerButton.addEventListener("click", function () {
+  burgerMenu.classList.toggle("active");
+  burgerButton.classList.toggle("active");
+});
+
+const links = document.querySelectorAll(".burger-menu__list");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    burgerMenu.classList.remove("active");
+    burgerButton.classList.remove("active");
+  });
+});

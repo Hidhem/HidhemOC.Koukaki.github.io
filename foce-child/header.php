@@ -29,17 +29,12 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
             <ul>
-                <span id="navigation__burger" class="navigation__burger">
-                    <div id="burger__top" class="burger__top"></div>
-                    <div id="burger__mid" class="burger__mid"></div>
-                    <div id="burger__bottom" class="burger__bottom"></div>
-                </span>
+                <div id="navigation__burger" class="navigation__burger">
+                    <span id="line" class="line"></span>
+                    <span id="line" class="line"></span>
+                    <span id="line" class="line"></span>
+                </div>
                 <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
             </ul>
             <div id="nav__burger-menu" class="nav__burger-menu">
